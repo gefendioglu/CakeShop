@@ -50,6 +50,7 @@ namespace WebUI
             services.AddControllersWithViews();
 
             // Dependency Resolving
+            services.AddTransient<IAuthService, AuthService>();
             services.AddTransient<ITokenHelper, JwtHelper>();
             services.AddTransient<IUserDal, EfUserDal>();
             services.AddTransient<IUserService, UserService>();
